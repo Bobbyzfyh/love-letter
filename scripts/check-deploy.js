@@ -112,8 +112,11 @@ async function main() {
     let musicOk = 0
     let rangeOk = 0
     let totalBytes = 0
-    for (const src of music.sources) {
-      const clean = String(src).replace(/^(\/|\.\/)+/, '')
+    for (const entry of music.sources) {
+      // 播放列表里每一项可以是字符串，也可以是 { src, gain } 这种对象
+      const raw = typeof entry === 'string' ? entry : entry && entry.src
+      if (!raw) continue
+      const clean = String(raw).replace(/^(\/|\.\/)+/, '')
       const url = new URL(clean, base).href
       const response = await head(url)
       const type = response.headers ? response.headers.get('content-type') || '' : ''

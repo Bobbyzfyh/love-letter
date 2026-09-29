@@ -8,8 +8,8 @@
  * ===========================================================================
  */
 export const qrConfig = {
-  // ★★★ 这里改成你的网站地址 ★★★
-  url: 'https://your-project.vercel.app',
+  // ★★★ 你的网站地址（已经填好了，以后换域名改这里）★★★
+  url: 'https://bobbyzfyh.github.io/love-letter/',
 
   // 图片保存位置（相对项目根目录）
   output: 'public/qr-code.png',
