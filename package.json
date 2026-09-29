@@ -1,0 +1,24 @@
+{
+  "name": "qr-love-letter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "一个用二维码打开的中文电子情书 / QR Love Letter",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "qr": "node scripts/generateQR.js",
+    "check": "node scripts/check-deploy.js",
+    "placeholder:images": "node scripts/make-placeholder-images.mjs",
+    "placeholder:music": "node scripts/make-placeholder-music.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "qrcode": "^1.5.4",
+    "vite": "^6.3.5"
+  }
+}
