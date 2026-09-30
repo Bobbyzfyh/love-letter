@@ -6,6 +6,8 @@
   "description": "一个用二维码打开的中文电子情书 / QR Love Letter",
   "scripts": {
     "dev": "vite",
+    "assets": "node scripts/check-assets.js",
+    "prebuild": "node scripts/check-assets.js",
     "build": "vite build",
     "preview": "vite preview",
     "qr": "node scripts/generateQR.js",
