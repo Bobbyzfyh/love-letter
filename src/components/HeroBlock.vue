@@ -4,7 +4,7 @@
  * ---------------------------------------------------------------------------
  * 内容全部来自 src/data/config.js 的 hero 配置。
  */
-import { hero, site } from '../data/config.js'
+import { hero } from '../data/config.js'
 </script>
 
 <template>
@@ -13,12 +13,6 @@ import { hero, site } from '../data/config.js'
       <span class="u-kicker hero__kicker" v-reveal="{ type: 'soft' }">{{ hero.kicker }}</span>
 
       <h1 class="hero__title" v-reveal="{ delay: 320, type: 'soft' }">{{ hero.title }}</h1>
-
-      <p class="hero__names" v-reveal="{ delay: 720 }">
-        <span>{{ site.fromName }}</span>
-        <span class="hero__arrow" aria-hidden="true">—</span>
-        <span>{{ site.toName }}</span>
-      </p>
 
       <div v-if="hero.lines && hero.lines.length" class="hero__lines">
         <p
@@ -63,24 +57,9 @@ import { hero, site } from '../data/config.js'
   text-shadow: 0 0 40px rgba(216, 177, 132, 0.16);
 }
 
-.hero__names {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-top: 1.5rem;
-  font-family: var(--font-serif);
-  font-size: 0.84rem;
-  letter-spacing: 0.34em;
-  color: var(--c-text-faint);
-}
-
-.hero__arrow {
-  color: var(--c-accent);
-  opacity: 0.6;
-}
-
+/* 名字那一行已经去掉了，所以这里给引子留出更大的呼吸感 */
 .hero__lines {
-  margin-top: 2.6rem;
+  margin-top: 3.2rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
