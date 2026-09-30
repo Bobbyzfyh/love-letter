@@ -100,11 +100,10 @@ export const gallery = {
     { src: 'images/5.jpg', caption: '晚安吗？后来你就没和我说过这两个字了', note: '', rotate: -1.5 },
     { src: 'images/6.jpg', caption: '整个456月我不敢给你发消息，我努力去试着忘记你，但是很遗憾没做到', note: '', rotate: 3 },
 
-    // 下面这张是"公园"那张，带标题
+    // 下面这张是"公园"那张：只有标题 + 长按才出现的留言，没有配文
     {
       src: 'images/1.jpg',
       title: '你还记得这里吗',
-      caption: '当你看到这里的时候我应该就在我们之前去过的公园。',
       note: '福塔福塔，下一次我还能和她一起来吗',
       rotate: -2,
     },
